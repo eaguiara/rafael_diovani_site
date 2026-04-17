@@ -1,0 +1,205 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about {
+  width: 100%;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-medium) 100%);
+  color: var(--color-white);
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  display: none;
+}
+
+.hero::after {
+  display: none;
+}
+
+.hero h1 {
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.2rem;
+}
+
+.section {
+  padding: 4rem 2rem;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Formação */
+.formationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.formationCard {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border-left: 4px solid var(--color-primary-medium);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.formationCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+}
+
+.formationCard h3 {
+  margin-bottom: 0.5rem;
+}
+
+.institution {
+  color: var(--color-primary-medium);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.year {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Especialidades */
+.specialties {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.specialty {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.specialty h3 {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.specialty ul {
+  list-style: none;
+  padding: 0;
+}
+
+.specialty li {
+  padding: 0.5rem 0;
+  color: var(--color-text-light);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.specialty li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary-medium);
+  font-weight: bold;
+}
+
+/* Diferenciais */
+.differentials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.differential {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  animation: fadeIn 0.6s ease-in-out;
+  transition: var(--transition);
+}
+
+.differential:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+}
+
+.differentialNumber {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-primary-medium);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+}
+
+.differential h3 {
+  margin-bottom: 0.5rem;
+}
+
+.differential p {
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .formationGrid,
+  .specialties,
+  .differentials {
+    grid-template-columns: 1fr;
+  }
+}

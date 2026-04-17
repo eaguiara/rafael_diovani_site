@@ -1,0 +1,233 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact {
+  width: 100%;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-medium) 100%);
+  color: var(--color-white);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.2rem;
+}
+
+.section {
+  padding: 4rem 2rem;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.formSection h2,
+.infoSection h2 {
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.infoCard {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.infoCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+}
+
+.iconBox {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-bg);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-medium);
+  margin-bottom: 1rem;
+}
+
+.infoCard h3 {
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.infoCard p {
+  margin-bottom: 0.5rem;
+  color: var(--color-text-light);
+}
+
+.infoCard a {
+  color: var(--color-primary-medium);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.infoCard a:hover {
+  color: var(--color-primary);
+}
+
+.label {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-top: 0.25rem;
+}
+
+.cta {
+  background-color: var(--color-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid var(--color-primary-medium);
+  margin-top: 2rem;
+}
+
+.cta h3 {
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.cta p {
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+/* FAQ */
+.faq {
+  padding: 4rem 2rem;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.faqItem {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  animation: fadeIn 0.6s ease-in-out;
+  transition: var(--transition);
+}
+
+.faqItem:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.faqItem h4 {
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.faqItem p {
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+/* Schedule */
+.schedule {
+  padding: 4rem 2rem;
+}
+
+.schedule h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.scheduleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.scheduleItem {
+  background-color: var(--color-primary-light);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.scheduleItem h4 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.scheduleItem p {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.scheduleNote {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .section,
+  .faq,
+  .schedule {
+    padding: 3rem 1.5rem;
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .scheduleGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+}
