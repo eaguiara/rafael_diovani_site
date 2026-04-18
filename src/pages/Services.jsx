@@ -20,18 +20,18 @@ export default function Services() {
       shortDescription: 'Estruturação de negócios e documentação jurídica'
     },
     {
-      id: 'familia-sucessoes',
-      icon: Heart,
-      title: 'Família & Sucessões',
-      description: 'Planejamento sucessório, testamentos e litígios familiares com sensibilidade.',
-      shortDescription: 'Solução em questões familiares e hereditárias'
-    },
-    {
       id: 'falencias-recuperacoes',
       icon: FileText,
       title: 'Falências & Recuperações',
       description: 'Atuação em falências, recuperações de empresas e reestruturações de dívidas.',
       shortDescription: 'Proteção de créditos e administração judicial'
+    },
+    {
+      id: 'familia-sucessoes',
+      icon: Heart,
+      title: 'Família & Sucessões',
+      description: 'Planejamento sucessório, testamentos e litígios familiares com sensibilidade.',
+      shortDescription: 'Solução em questões familiares e hereditárias'
     },
     {
       id: 'imobiliario-leiloes',

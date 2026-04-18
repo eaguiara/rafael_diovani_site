@@ -1,7 +1,7 @@
 import { MessageCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import styles from './HeroSection.module.css';
-import naturezaImg from '../assets/natureza.png';
+import saopauloImg from '../assets/sao-paulo.avif';
 
 export default function HeroSection({ title, subtitle, cta, image = null }) {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ export default function HeroSection({ title, subtitle, cta, image = null }) {
   };
 
   return (
-    <section className={styles.hero} style={{ backgroundImage: `url(${naturezaImg})` }}>
+    <section className={styles.hero} style={{ backgroundImage: `url(${saopauloImg})` }}>
       <div className={styles.content}>
         <div className={styles.textContent}>
           <h1 className={styles.title}>{title}</h1>

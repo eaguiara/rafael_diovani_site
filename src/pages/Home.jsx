@@ -1,4 +1,4 @@
-import { Scale, Briefcase, Heart, ArrowRight } from 'lucide-react';
+import { Scale, Briefcase, Heart, Building2, FileText, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {
   HeroSection,
@@ -20,6 +20,18 @@ export default function Home() {
       title: 'Societário & Contratos',
       description: 'Assessoria em sociedades, associações, fundações e elaboração de contratos.',
       link: '/servicos/societario-contratos'
+    },
+    {
+      icon: FileText,
+      title: 'Falências & Recuperações',
+      description: 'Atuação em falências, recuperações de empresas e reestruturações de dívidas.',
+      link: '/servicos/falencias-recuperacoes'
+    },
+    {
+      icon: Building2,
+      title: 'Imobiliário & Leilões',
+      description: 'Desenvolvimento de empreendimentos, transações imobiliárias e leilões.',
+      link: '/servicos/imobiliario-leiloes'
     },
     {
       icon: Heart,
@@ -51,7 +63,7 @@ export default function Home() {
           </div>
           <div className={styles.viewAllButtonContainer}>
             <Link to="/servicos" className={styles.viewAllButton}>
-              <strong>Ver Todos os Serviços</strong>
+              <strong>Ver mais sobre os serviços</strong>
               <ArrowRight size={20} />
             </Link>
           </div>

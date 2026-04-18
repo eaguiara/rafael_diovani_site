@@ -1,4 +1,5 @@
 import { MessageCircle, Mail, Phone } from 'lucide-react';
+import linkedinIcon from '../assets/linkedin.svg';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -46,10 +47,19 @@ export default function Footer() {
         <div className={styles.divider}></div>
 
         <div className={styles.bottom}>
-          <p>&copy; {currentYear} Rafael Diovani - Advogado. Todos os direitos reservados.</p>
-          <p className={styles.disclaimer}>
-            Este website é meramente informativo e não constitui aconselhamento jurídico.
-          </p>
+          <div className={styles.bottomContent}>
+            <div className={styles.bottomLeft}>
+              <p>&copy; {currentYear} Rafael Diovani - Advogado. Todos os direitos reservados.</p>
+              <p className={styles.oab}>OAB/SP 444.241</p>
+            </div>
+            <div className={styles.bottomRight}>
+              <div className={styles.social}>
+                <a href="https://www.linkedin.com/in/rafael-diovani" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="LinkedIn">
+                  <img src={linkedinIcon} alt="LinkedIn" className={styles.socialIcon} />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

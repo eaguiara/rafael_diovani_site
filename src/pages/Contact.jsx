@@ -1,8 +1,12 @@
+import { useEffect } from 'react';
 import { Mail, Phone, MessageCircle, MapPin } from 'lucide-react';
 import { ContactForm } from '../components';
 import styles from './Contact.module.css';
 
 export default function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={styles.contact}>
       {/* Hero Section */}
