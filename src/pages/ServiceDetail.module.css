@@ -1,0 +1,245 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.serviceDetail {
+  width: 100%;
+}
+
+.backNav {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary-medium);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.backLink:hover {
+  color: var(--color-primary);
+  transform: translateX(-3px);
+}
+
+.notFound {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.notFound h1 {
+  margin-bottom: 2rem;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-medium) 100%);
+  color: var(--color-white);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.heroIcon {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-light);
+  margin: 0 auto 2rem;
+}
+
+.hero h1 {
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 4rem 2rem;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.fullDescription {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text-light);
+}
+
+/* Problemas */
+.problemsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.problemItem {
+  display: flex;
+  gap: 1.5rem;
+  background-color: var(--color-white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.problemCheckmark {
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.problemItem p {
+  color: var(--color-text-light);
+  margin: 0;
+  align-self: center;
+}
+
+/* Soluções */
+.solutionsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.solutionItem {
+  display: flex;
+  gap: 1.5rem;
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  animation: fadeIn 0.6s ease-in-out;
+  transition: var(--transition);
+}
+
+.solutionItem:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+}
+
+.solutionNumber {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-primary-medium);
+  color: var(--color-white);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.solutionItem p {
+  color: var(--color-text-light);
+  margin: 0;
+  align-self: center;
+}
+
+/* Processo */
+.processList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  position: relative;
+}
+
+.processStep {
+  position: relative;
+  padding: 2rem;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+  transition: var(--transition);
+}
+
+.processStep:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+}
+
+.stepNumber {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0 auto 1rem;
+}
+
+.processStep h4 {
+  color: var(--color-primary);
+  margin-bottom: 0;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .heroIcon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .problemsList,
+  .solutionsList,
+  .processList {
+    grid-template-columns: 1fr;
+  }
+
+  .backNav {
+    padding: 1rem 1.5rem;
+  }
+}

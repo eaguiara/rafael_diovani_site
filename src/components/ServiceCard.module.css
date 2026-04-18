@@ -1,0 +1,112 @@
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.6s ease-in-out;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary-light), var(--color-primary-medium));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+  border-color: var(--color-primary-lightest);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary-lighter) 100%);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  margin: 0 auto var(--spacing-lg);
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(45, 106, 79, 0.15);
+}
+
+.card:hover .iconWrapper {
+  background: linear-gradient(135deg, var(--color-primary-medium) 0%, var(--color-primary) 100%);
+  color: var(--color-white);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(27, 67, 50, 0.25);
+}
+
+.card h3 {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+  transition: var(--transition-fast);
+}
+
+.card:hover h3 {
+  color: var(--color-primary-medium);
+}
+
+.card p {
+  flex-grow: 1;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text-light);
+}
+
+.link {
+  color: var(--color-primary-medium);
+  font-weight: 600;
+  transition: var(--transition-fast);
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary-medium), var(--color-primary-light));
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover {
+  color: var(--color-primary);
+  transform: translateX(5px);
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: var(--spacing-lg);
+  }
+}
